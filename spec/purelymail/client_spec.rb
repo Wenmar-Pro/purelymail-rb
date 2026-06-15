@@ -112,14 +112,14 @@ RSpec.describe Purelymail::Client do
 
   describe "#create_user" do
     it_behaves_like "an API endpoint", "createUser", :create_user,
-                    { name: "alice", domain: "example.com", password: "s3cret" },
-                    { userName: "alice", domainName: "example.com", password: "s3cret" }
+                    { username: "alice", password: "s3cret" },
+                    { userName: "alice", password: "s3cret" }
   end
 
   describe "#change_password" do
-    it_behaves_like "an API endpoint", "changePassword", :change_password,
-                    { name: "alice", domain: "example.com", password: "newpass" },
-                    { userName: "alice", domainName: "example.com", password: "newpass" }
+    it_behaves_like "an API endpoint", "modifyUser", :change_password,
+                    { username: "alice", new_password: "newpass" },
+                    { userName: "alice", newPassword: "newpass" }
   end
 
   describe "#create_routing_rule" do

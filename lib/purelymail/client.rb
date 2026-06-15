@@ -15,12 +15,12 @@ module Purelymail
       post("addDomain", { domainName: name })
     end
 
-    def create_user(name:, domain:, password:)
-      post("createUser", { userName: name, domainName: domain, password: password })
+    def create_user(username:, password:)
+      post("createUser", { userName: username, password: password })
     end
 
-    def change_password(name:, domain:, password:)
-      post("changePassword", { userName: name, domainName: domain, password: password })
+    def change_password(username:, new_password:)
+      post("modifyUser", { userName: username, newPassword: new_password })
     end
 
     def create_routing_rule(domain_name:, match_user:, target_addresses:, prefix: false, catchall: false)
