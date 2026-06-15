@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email = ["ben@bendangelo.me"]
   spec.summary = "Ruby client for the Purelymail API"
   spec.description = "A standalone Ruby gem for interacting with the Purelymail API. Manage domains, users, routing rules, and more."
-  spec.homepage = "https://github.com/bendangelo/purelymail-rb"
+  spec.homepage = "https://github.com/Wenmar-Pro/purelymail-rb"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.7.0"
 
